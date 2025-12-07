@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rumah Kopi Si Bungsu</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #f4e1d2, #d4a574);
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #5a3116, #8b4513);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    animation: headerFade 1.3s ease;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    opacity: 0.9;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+/* SECTION */
+.section {
+    margin: 60px 0;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.section.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* MENU GRID */
+/* DEFAULT = HP (2 KOLUMN) */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+/* MENU ITEM */
+.menu-item {
+    background: white;
+    padding: 16px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+    opacity: 0;
+    transform: scale(0.95) translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.menu-item.animate {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.menu-item:hover {
+    transform: scale(1.04) translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* IMAGE */
+.menu-item img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* TEXT */
+.menu-item h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.menu-item p {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+footer img {
+    width: 22px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+/* RESPONSIVE */
+/* TABLET */
+@media (min-width: 768px) {
+    .menu {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* LAPTOP BESAR */
+@media (min-width: 1200px) {
+    .menu {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ANIM */
+@keyframes headerFade {
+    from { opacity: 0; transform: translateY(-40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Rumah Kopi Si Bungsu</h1>
+    <p>Nyaman buat ngopi, kerja, dan nongkrong</p>
+</header>
+
+<div class="container">
+
+<section class="section">
+            <h2>Menu Kopi</h2>
+            <div class="menu">
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/4c/28/e2/4c28e2420bf38c50120dba0cbaf42e8d.jpg" class="coffee-img">
+                    <h3>Espresso</h3>
+                    <p>Kopi espresso yang diseduh lebih lama untuk rasa yang lebih ringan.</p>
+    
+                </div><div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/ba/20/dd/ba20ddf56f62b5002e1cb9aa31433131.jpg" alt="Long Black Coffe" class="coffee-img">
+                    <h3>Long black</h3>
+                    <p>Kopi long black yang hangat dan nikmat.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/1200x/cb/48/db/cb48db04009801523739569e0f33cfc3.jpg" alt="Americano Ice" class="coffee-img">
+                    <h3>Americano Ice</h3>
+                    <p>Espresso dicampur air dingin, segar untuk cuaca panas.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/1200x/16/ae/a2/16aea265661555f9c09fd1d29eee4763.jpg" alt="Affogato Ice" class="coffee-img">
+                    <h3>Affogato Ice</h3>
+                    <p>Es krim vanilla dituangkan espresso panas.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/28/ee/71/28ee71394fd3ecfdb7e6b835eb690228.jpg" alt="Caffe Latte Hot" class="coffee-img">
+                    <h3>Caffe Latte Hot</h3>
+                    <p>Espresso dengan susu panas.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/8f/b1/d5/8fb1d5410a11056dad5b9e39631bc8f7.jpg" alt="Caffe Latte Ice" class="coffee-img">
+                    <h3>Caffe Latte Ice</h3>
+                    <p>Espresso dengan susu dingin dan es.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/f8/56/1e/f8561ea80e14bd1989b4fe87736e1468.jpg" class="coffee-img">
+                    <h3>Cappuccino Hot</h3>
+                    <p>Espresso dengan busa susu panas dan cokelat.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/a4/a1/7b/a4a17bf478e22fb93a138e3c87c62f8b.jpg" class="coffee-img">
+                    <h3>Cappuccino Ice</h3>
+                    <p>Espresso dengan busa susu dingin dan es.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/1200x/32/58/39/32583955510da20a6abdb21eb9aa7e7d.jpg" alt="Vanilla Latte Hot" class="coffee-img">
+                    <h3>Vanilla Latte Hot</h3>
+                    <p>Caffe latte dengan sirup vanilla panas.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/63/7b/a2/637ba2642e27ff4a357ae66ac23ac1db.jpg" alt="Vanilla Latte Ice" class="coffee-img">
+                    <h3>Vanilla Latte Ice</h3>
+                    <p>Caffe latte dengan sirup vanilla dingin.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/1200x/56/3f/2c/563f2ca6c53a247a7001413f844081b9.jpg" alt="Caramel Latte Hot" class="coffee-img">
+                    <h3>Caramel Latte Hot</h3>
+                    <p>Caffe latte dengan sirup karamel panas.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/55/0f/21/550f2140321bb0d9dfb2f77262885c7d.jpg" alt="Caramel Latte Ice" class="coffee-img">
+                    <h3>Caramel Latte Ice</h3>
+                    <p>Caffe latte dengan sirup karamel dingin.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/70/19/e4/7019e4b3fbe9c54a6cc83bc915068f42.jpg" alt="Hazelnut Hot" class="coffee-img">
+                    <h3>Hazelnut Hot</h3>
+                    <p>Kopi dengan sirup hazelnut panas.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/85/d7/9d/85d79d2e99bdea296260c8aeaa738e38.jpg" alt="Hazelnut Ice" class="coffee-img">
+                    <h3>Hazelnut Ice</h3>
+                    <p>Kopi dengan sirup hazelnut dingin.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/1200x/fe/4d/23/fe4d237cfabce6d105ca317fad810825.jpg" alt="Coffee Nutella Ice" class="coffee-img">
+                    <h3>Coffee Nutella Ice</h3>
+                    <p>Kopi dingin dengan topping Nutella.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/1200x/f1/4e/70/f14e7007806beed9f34ff9cf733e5e52.jpg" alt="Mochaccino Hot" class="coffee-img">
+                    <h3>Mochaccino Hot</h3>
+                    <p>Espresso dengan cokelat dan susu panas.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/37/53/e3/3753e30fdca75c9243fb844a7f17660f.jpg" alt="Mochaccino Ice" class="coffee-img">
+                    <h3>Mochaccino Ice</h3>
+                    <p>Espresso dengan cokelat dan susu dingin.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/1200x/81/e4/2b/81e42b1a21defb01c2c440afce6a55db.jpg" alt="Coffee Frenzy Ice" class="coffee-img">
+                    <h3>Coffee Frenzy Ice</h3>
+                    <p>Kopi dingin dengan campuran rasa unik.</p>
+                </div>
+                <div class="menu-item">
+                    <img src= "https://i.pinimg.com/736x/23/0e/22/230e229ec51413c1ce468d62bebf647c.jpg" alt="Lemonade Ice" class="coffee-img">
+                    <h3>Lemonade Ice</h3>
+                    <p>Minuman lemon dingin tanpa kopi.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/98/52/1b/98521b4960b5c1ee4ec9b3989e568fdc.jpg" alt="Pinacolada Coffee Ice" class="coffee-img">
+                    <h3>Pinacolada Coffee Ice</h3>
+                    <p>Kopi dingin dengan rasa pinacolada.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/00/b3/d7/00b3d7cbbee18381f37ea78fed2c25d4.jpg" class="coffee-img">
+                    <h3>Vietnam Drip Ice</h3>
+                    <p>Kopi Vietnam yang diseduh dingin.<p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/39/2c/42/392c42c311a03ae2258371acd0409094.jpg" class="coffee-img">
+                    <h3>V60 Hot</h3>
+                    <p>Kopi manual brew V60 panas.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/1200x/a9/02/09/a90209fd30ef9fc4158bab12bf6469f3.jpg" alt="V60 Ice" class="coffee-img">
+                    <h3>V60 Ice</h3>
+                    <p>Kopi manual brew V60 dingin.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/1200x/22/3a/b4/223ab427f611f5394db279600099a645.jpg" alt="Sicube Coffe Ice" class="coffee-img">
+                    <h3>Sicube Coffe Ice</h3>
+                    <p>Kopi Sicube dengan kesegaran yang nikmat.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Milkshake -->
+        <section class="section">
+            <h2>Menu Milkshake</h2>
+            <div class="menu">
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/1200x/d9/30/5e/d9305edce30213c10c944c6fb386d40b.jpg" alt="Milkshake Coklat" class="coffee-img">
+                    <h3>Milkshake Coklat</h3>
+                    <p>Milkshake kaya rasa coklat, creamy dan lezat.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/a2/69/b1/a269b136c37a348887a22e9f52d47c68.jpg" alt="Milkshake Strawberry" class="coffee-img">
+                    <h3>Milkshake Strawberry</h3>
+                    <p>Milkshake segar dengan rasa stroberi alami.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/81/63/16/8163167e5526dfa5e13a0901bf97ada7.jpg" alt="Milkshake Manggo" class="coffee-img">
+                    <h3>Milkshake Manggo</h3>
+                    <p>Milkshake tropis dengan mangga manis.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/30/36/9e/30369ef944cb6a07d9fbc8fa615a868c.jpg" alt="Milkshake Grentea" class="coffee-img">
+                    <h3>Milkshake Greentea</h3>
+                    <p>Milkshake hijau dengan rasa teh hijau.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/1200x/fe/7d/55/fe7d55e005af26588e58ee4b21b4806f.jpg" alt="Milkshake Vanilla" class="coffee-img">
+                    <h3>Milkshake Vanilla</h3>
+                    <p>Milkshake klasik dengan aroma vanilla.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/1200x/1e/04/04/1e04048f52d19996f9e005f83b13d0e9.jpg" alt="Milkshake Milo" class="coffee-img">
+                    <h3>Milkshake Milo</h3>
+                    <p>Milkshake energik dengan Milo.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/1200x/65/c9/a1/65c9a12338bbbf6128e7076e959eb6ba.jpg" alt="Milkshake Oreo" class="coffee-img">
+                    <h3>Milkshake Oreo</h3>
+                    <p>Milkshake crunchy dengan biskuit Oreo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Favorite -->
+        <section class="section">
+            <h2>Menu Favorite</h2>
+            <div class="menu">
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/15/92/47/15924727c548aac4e61c505c245ad3e4.jpg" alt="Chocolate Magnum" class="coffee-img">
+                    <h3>Chocolate Magnum</h3>
+                    <p>Minuman coklat premium dengan topping Magnum.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/1200x/aa/f0/15/aaf0152e9794be7c9df8eefc92a09a42.jpg" alt="Choco Matcha Ice" class="coffee-img">
+                    <h3>Choco Matcha Ice</h3>
+                    <p>Campuran coklat dan matcha dingin yang menyegarkan.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/1200x/79/32/df/7932dfbef93d100f08f0b495b6b0f565.jpg" alt="Red Velvet" class="coffee-img">
+                    <h3>Red Velvet</h3>
+                    <p>Minuman dengan rasa red velvet yang lembut.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Mocktail -->
+        <section class="section">
+            <h2>Menu Mocktail</h2>
+            <div class="menu">
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/97/8d/78/978d785d036e4b89a56524dd7ad4549c.jpg" alt="Blue Illusion" class="coffee-img">
+                    <h3>Blue Illusion</h3>
+                    <p>Mocktail biru dengan rasa tropis dan segar.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/cc/2f/b9/cc2fb979a212c4493f6ecbd1890e3bf9.jpg" alt="Virgin Mary" class="coffee-img">
+                    <h3>Virgin Mary</h3>
+                    <p>Mocktail klasik tanpa alkohol, pedas dan menyegarkan.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/d4/bd/6a/d4bd6aa20eaebba12331021c5c2cec8d.jpg" alt="Lamborghini" class="coffee-img">
+                    <h3>Lamborghini</h3>
+                    <p>Mocktail berlapis dengan rasa buah campur.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/55/1b/3a/551b3a3548f23ab9bef98f5d7cb07239.jpg" alt="Strawberry Mojito" class="coffee-img">
+                    <h3>Strawberry Mojito</h3>
+                    <p>Mocktail stroberi dengan mint dan soda.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/1200x/40/b8/cd/40b8cd29ed757bb59e52c22167ca6434.jpg" alt="Orange Squash" class="coffee-img">
+                    <h3>Orange Squash</h3>
+                    <p>Mocktail jeruk segar dengan rasa manis.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/1200x/7e/4b/ab/7e4bab2852c55d8456eda8acbb4ab4ae.jpg" alt="Mango Squash" class="coffee-img">
+                    <h3>Mango Squash</h3>
+                    <p>Mocktail mangga tropis yang juicy.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Juice -->
+        <section class="section">
+            <h2>Menu Juice</h2>
+            <div class="menu">
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/a5/df/58/a5df58cb2972c04ca6f4a74e08a27eb1.jpg" alt="Juice Alpukat" class="coffee-img">
+                    <h3>Juice Alpukat</h3>
+                    <p>Juice alpukat segar dan creamy.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/30/8b/45/308b45dd6958bae6ac579d472e163025.jpg" alt="Juice Melon" class="coffee-img">
+                    <h3>Juice Melon</h3>
+                    <p>Juice melon manis dan menyegarkan.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/52/5d/0b/525d0b62ea336101d4abb424690eeb94.jpg" alt="Juice Manggo" class="coffee-img">
+                    <h3>Juice Manggo</h3>
+                    <p>Juice mangga tropis yang lezat.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/cf/5e/87/cf5e876be7ed75b11d62fac812f8609d.jpg" alt="Juice Strawberry" class="coffee-img">
+                    <h3>Juice Strawberry</h3>
+                    <p>Juice stroberi alami dan segar
+                    </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/fe/bd/58/febd5824b09cce5915e02aa980716ee1.jpg" alt="Juice Jeruk" class="coffee-img">
+                    <h3>Juice Jeruk</h3>
+                    <p>Juice jeruk asam manis yang vitamin C tinggi.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/dd/6b/0b/dd6b0bc9867d401cdb430169e4eaa825.jpg" alt="Juice Buah Naga" class="coffee-img">
+                    <h3>Juice Buah Naga</h3>
+                    <p>Juice buah naga segar dan menyehatkan.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Tea -->
+        <section class="section">
+            <h2>Menu Tea</h2>
+            <div class="menu">
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/0a/7c/27/0a7c27f56aa886c3451e4cf97bc37e57.jpg" alt="Teh Manis" class="coffee-img">
+                    <h3>Teh Manis</h3>
+                    <p>Teh hangat klasik dengan manis pas.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/1200x/37/6f/38/376f38066c01d3ef5194925c477d3715.jpg" alt="Lemon Tea" class="coffee-img">
+                    <h3>Lemon Tea</h3>
+                    <p>Teh segar dengan perasan lemon alami.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/9b/80/7e/9b807e48a293f8e97f866fd574f252fc.jpg" alt="Teh Tarik" class="coffee-img">
+                    <h3>Teh Tarik</h3>
+                    <p>Teh susu khas Malaysia, lembut dan creamy.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/0b/e7/b8/0be7b87d66b4d16ec60455d1d81abbe8.jpg" alt="Teh Susu Thai" class="coffee-img">
+                    <h3>Teh Susu Thai</h3>
+                    <p>Teh tarik ala Thailand dengan rempah dan susu.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/1200x/48/a0/a4/48a0a4318bd0a4370f69c89f6200bf2d.jpg" alt="Green Tea Thai" class="coffee-img">
+                    <h3>Green Tea Thai</h3>
+                    <p>Teh hijau Thai dengan susu dan gula manis.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/0b/e7/b8/0be7b87d66b4d16ec60455d1d81abbe8.jpg" alt="Thai Tea" class="coffee-img">
+                    <h3>Thai Tea</h3>
+                    <p>Teh Thailand klasik, harum dan creamy.</p>
+                </div>
+            </div>
+        </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2025 Rumah Kopi Si Bungsu</p>
+    <div style="margin-top:10px;">
+        <a href="https://wa.me/6285691976684" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+            085691976684
+        </a>
+        <a href="https://www.instagram.com/rumah.kopi.sibungsu/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+            rumah.kopi.sibungsu
+        </a>
+    </div>
+</footer>
+
+<script>
+const items = document.querySelectorAll('.section, .menu-item');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+            entry.target.style.transitionDelay = `${i * 0.05}s`;
+            entry.target.classList.add('animate');
+        }
+    });
+}, { threshold: 0.2 });
+
+items.forEach(item => observer.observe(item));
+</script>
+
+</body>
+</html>
